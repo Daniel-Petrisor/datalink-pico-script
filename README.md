@@ -1,2 +1,9 @@
-# datalink-pico-script
-Read data from logger EL005 - Pico Technology and storage in sqlite3 database
+
+** CREATE APP.EXE
+
+* Install package
+    pip install pyinstaller
+
+* Typed and Run in terminal
+    pyinstaller nome_script.py --onefile
+    pyinstaller nome_script.py --noconsole --onefile
