@@ -98,14 +98,18 @@ def read_interval_data(path_dir, sensor_name, dt_start, dt_end):
 
 
 path_sqlite3 = "W:\Altri computer\Produzione 1\Pico Technology\EnviroMon\Data\produzione1.sqlite3"
-date_start = "06/10/2022 11:10:00"
+date_start = "06/10/2022 22:10:00"
 date_end = "07/10/2022 02:40:00"
 forno = "OSAR 7"
 
-try:
-    read_interval_data(path_sqlite3, forno, date_start, date_end)
-except:
-    print("Dati non disponibili per l'intervallo selezionato")
 
 
-read_last_data(path_sqlite3, forno, 1)
+# try:
+#     read_interval_data(path_sqlite3, forno, date_start, date_end)
+# except:
+#     print("Dati non disponibili per l'intervallo selezionato")
+
+
+sensors_lst = ["HERAEUS", "OSAR 1", "OSAR 2", "OSAR 3", "OSAR 5", "OSAR 7"]
+for sensor_name in sensors_lst:
+    read_last_data(path_sqlite3, sensor_name, 1)
